@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="?attr/colorPrimary"
+    android:titleTextColor="@android:color/white"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:titleTextColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_back"
+            android:clickable="true"
+            android:scaleType="center"
+            android:visibility="gone"
+            android:src="@mipmap/back" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/back"
+            android:background="@color/write"/>
+
+        <ImageView
+            android:id="@+id/finish"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/line"
+            android:visibility="gone"
+            android:background="@drawable/selector_back"
+            android:scaleType="center"
+            android:src="@mipmap/finsh" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:typeface="sans"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/more"
+            android:visibility="gone"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_back"
+            android:scaleType="center"
+            android:src="@mipmap/more" />
+
+        <TextView
+            android:id="@+id/text"
+            android:visibility="gone"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_back"
+            android:scaleType="center"
+            android:textSize="12sp"
+            android:textColor="@color/write"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
+

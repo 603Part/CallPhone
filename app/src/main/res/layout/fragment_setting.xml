@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/my_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/my_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="飞机呼欢迎您"
+            android:textColor="@color/write"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/my_nick_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_nick_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="欢迎使用飞机呼软件!"
+            android:textColor="@color/write"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        app:hintTextAppearance="@style/TextInputLayout">
+
+        <EditText
+            android:id="@+id/setting_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="本机号码  (填写错误将导致收益为负)"
+            android:inputType="textEmailAddress"
+            android:focusable="false"
+            android:textColor="@color/textColors"
+            android:textSize="13sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        app:hintTextAppearance="@style/TextInputLayout">
+
+        <EditText
+            android:id="@+id/setting_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="归属地  (填写错误可能产生额外话费)"
+            android:inputType="textEmailAddress"
+            android:focusable="false"
+            android:textColor="@color/textColors"
+            android:textSize="13sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/setting_edit"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="编辑"
+            android:textSize="12sp"
+            android:textColor="@color/write" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/setting_test"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="测试"
+            android:textSize="12sp"
+            android:textColor="@color/write"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="来电显示"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/setting_check_caller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:clickable="false"
+            android:contextClickable="false"
+            app:color_checked="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="(如果号卡开通来电显示请勾选)"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="本地号卡"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/setting_check_num_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:clickable="false"
+            android:contextClickable="false"
+            app:color_checked="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="(号卡归属范围内挂机请勾选)"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center|right"
+            android:text="注:勾选可增加挂机收益"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/textColors"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/my_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/user" />
+
+        <TextView
+            android:id="@+id/my_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="飞机呼"
+            android:textColor="@color/write"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/my_nick_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_nick_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="感谢使用!"
+            android:textColor="@color/write"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_balance"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/balance"
+            android:text="查询余额" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_extract"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/cash"
+            android:text="积分提现" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_new_card"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/card"
+            android:text="生成新卡" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_transfer"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/make_money"
+            android:text="积分转账" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_update"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/reset"
+            android:text="重置密码" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_more"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/more2"
+            android:text="更多功能" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_edit"
+            style="@style/My_Menu"
+            android:drawableTop="@mipmap/edit"
+            android:text="编辑" />
+        <android.support.v4.widget.Space style="@style/My_Menu" />
+    </LinearLayout>
+</LinearLayout>
